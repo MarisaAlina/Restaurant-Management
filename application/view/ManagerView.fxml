@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="ManagerOverviewAnchorPane" prefHeight="698.0" prefWidth="1354.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.ucl.cs.gc01.me.application.view.ManagerController">
+   <children>
+      <AnchorPane prefHeight="698.0" prefWidth="948.0">
+         <children>
+            <Pane fx:id="OrderManagementPane" layoutX="486.0" layoutY="-5.0" prefHeight="703.0" prefWidth="456.0">
+               <children>
+                  <ButtonBar layoutX="256.0" layoutY="625.0" prefHeight="40.0" prefWidth="158.0">
+                    <buttons>
+                        <Button fx:id="importOrdersBtn" mnemonicParsing="false" onAction="#importOrders" text="Import" />
+                      <Button fx:id="exportOrdersBtn" mnemonicParsing="false" onAction="#exportOrders" text="Export" />
+                    </buttons>
+                  </ButtonBar>
+                  <Label fx:id="orderManagementLabel" layoutX="140.0" layoutY="77.0" text="Order Management">
+                     <font>
+                        <Font name="Avenir Light" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="orderTable" editable="true" layoutX="14.0" layoutY="125.0" onMouseClicked="#showOrderDetails" prefHeight="319.0" prefWidth="412.0">
+                    <columns>
+                        <TableColumn fx:id="orderIDColumn" prefWidth="75.0" text="Order ID" />
+                      <TableColumn fx:id="orderUserNameColumn" prefWidth="75.0" text="User Name" />
+                        <TableColumn fx:id="orderTableColumn" prefWidth="75.0" text="Table" />
+                      <TableColumn fx:id="orderTimeStampColumn" prefWidth="75.0" text="Time Stamp" />
+                        <TableColumn fx:id="orderTotalValueColumn" prefWidth="75.0" text="Total Value" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView fx:id="orderDetailsTable" editable="true" layoutX="14.0" layoutY="463.0" prefHeight="149.0" prefWidth="412.0">
+                    <columns>
+                      <TableColumn fx:id="orderDetailsDishTypeColumn" prefWidth="75.0" text="Dish Type" />
+                      <TableColumn fx:id="orderDetailsDishNameColumn" prefWidth="75.0" text="Dish Name" />
+                        <TableColumn fx:id="orderDetailsDishPriceColumn" prefWidth="75.0" text="Dish Price" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Separator layoutX="454.0" layoutY="4.0" orientation="VERTICAL" prefHeight="695.0" prefWidth="6.0" />
+                  <Label fx:id="ChezRemyLabel" layoutX="86.0" layoutY="14.0" text="Chez Remy Management">
+                     <font>
+                        <Font name="Avenir Light" size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <SplitPane fx:id="EmployeeDetailsSplitPane" layoutX="20.0" layoutY="124.0" prefHeight="267.0" prefWidth="440.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="employeeTable" editable="true" onMouseClicked="#showEmployeeActivity" prefHeight="265.0" prefWidth="397.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="75.0" text="User Name" />
+                            <TableColumn fx:id="passwordColumn" prefWidth="75.0" text="Password" />
+                              <TableColumn fx:id="accessLevelColumn" prefWidth="75.0" text="Access Level" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Label fx:id="employeeMgtLabel" layoutX="101.0" layoutY="82.0" text="Employee &amp; User Management">
+               <font>
+                  <Font name="Avenir Light" size="18.0" />
+               </font>
+            </Label>
+            <ButtonBar layoutX="288.0" layoutY="621.0" prefHeight="40.0" prefWidth="158.0">
+              <buttons>
+                <Button fx:id="ExitBtn" mnemonicParsing="false" onAction="#ExitProgramme" text="Exit" />
+                  <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+              </buttons>
+            </ButtonBar>
+            <GridPane layoutX="686.0" layoutY="122.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Separator layoutX="483.0" layoutY="2.0" orientation="VERTICAL" prefHeight="695.0" prefWidth="6.0" />
+            <TextField fx:id="userNameTextField" layoutX="20.0" layoutY="405.0" prefHeight="26.0" prefWidth="128.0" promptText="UserName" />
+            <TextField fx:id="passwordTextField" layoutX="160.0" layoutY="405.0" prefHeight="26.0" prefWidth="128.0" promptText="Password" />
+            <ButtonBar layoutX="288.0" layoutY="398.0" prefHeight="40.0" prefWidth="170.0">
+              <buttons>
+                <Button fx:id="addUserBtn" minWidth="58.0" mnemonicParsing="false" onAction="#addUser" prefHeight="18.0" text="Add" />
+                  <Button fx:id="deleteUserBtn" minWidth="61.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" text="Delete" />
+              </buttons>
+            </ButtonBar>
+            <Label fx:id="errorUserTableLabel" layoutX="375.0" layoutY="444.0" text="" textFill="#c91515" />
+            <TableView fx:id="activityLogTable" layoutX="21.0" layoutY="460.0" prefHeight="149.0" prefWidth="438.0">
+              <columns>
+                <TableColumn fx:id="activityLogOrderIDColumn" prefWidth="75.0" text="Order ID" />
+                  <TableColumn fx:id="activityLogTableNrColumn" prefWidth="75.0" text="Table Number" />
+                <TableColumn fx:id="activityLogTimeStampColumn" prefWidth="75.0" text="Time Stamp" />
+                  <TableColumn fx:id="activityLogOrderValueColumn" prefWidth="75.0" text="Order Value" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="MenuManagementPane" layoutX="941.0" layoutY="2.0" prefHeight="695.0" prefWidth="431.0">
+         <children>
+            <Label fx:id="menuManagementLabel" layoutX="137.0" layoutY="72.0" text="Menu Management">
+               <font>
+                  <Font name="Avenir Light" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="menuTable" editable="true" layoutX="20.0" layoutY="117.0" prefHeight="451.0" prefWidth="399.0">
+              <columns>
+                <TableColumn fx:id="itemTypeColumn" prefWidth="75.0" text="Type" />
+                <TableColumn fx:id="itemNameColumn" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="itemPriceColumn" prefWidth="75.0" text="Price" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <ButtonBar layoutX="247.0" layoutY="618.0" prefHeight="40.0" prefWidth="135.0">
+              <buttons>
+                  <Button fx:id="addMenuItemBtn" mnemonicParsing="false" onAction="#addDish" text="Add" />
+                  <Button fx:id="deleteMenuItemBtn" mnemonicParsing="false" onAction="#deleteDish" text="Delete" />
+              </buttons>
+            </ButtonBar>
+            <TextField fx:id="newDishTypeLabel" layoutX="20.0" layoutY="580.0" prefHeight="26.0" prefWidth="128.0" promptText="DishType" />
+            <TextField fx:id="newDishNameLabel" layoutX="156.0" layoutY="580.0" prefHeight="26.0" prefWidth="128.0" promptText="DishName" />
+            <TextField fx:id="newDishPriceLabel" layoutX="289.0" layoutY="580.0" prefHeight="26.0" prefWidth="128.0" promptText="DishPrice" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

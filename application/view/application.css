@@ -1,0 +1,163 @@
+/* JavaFX CSS - Ubiquitous styling rules for "Chez Remy" using -fx-Property 
+ * References: https://docs.oracle.com/cd/E17802_01/javafx/javafx/1.3/docs/api/javafx.scene/doc-files/cssref.html
+ * #bfc6d5
+ * #423f6e
+ * #502e3b
+ * #f6cac9
+ */
+ 
+  .root {
+ 	-fx-background-color: #f0eee9; 
+ }
+ 
+ .button {
+ 	-fx-font-size: 15px;
+ 	-fx-font-family: "Avenir";
+ 	-fx-background-color:  #a0787e;
+ 	-fx-text-fill: #ffffff;
+ 	-fx-border-radius: 6.0;
+ }
+ 
+ /*
+  * ________GENERIC BUTTONS______
+  */
+  
+ #btnLogin {
+	-fx-font-size: 15px;
+ 	-fx-font-family: "Avenir";
+ 	-fx-background-color: #a0787e;
+ 	-fx-text-fill: #ffffff;
+ 	-fx-border-radius: 8.0;
+}
+  
+ #ExitBtn {
+	-fx-font-size: 15px;
+ 	-fx-font-family: "Avenir";
+ 	-fx-background-color: #a8b0ae;
+ 	-fx-text-fill: #ffffff;
+ 	-fx-border-radius: 8.0;
+}
+
+#btnLogout {
+	-fx-font-size: 15px;
+ 	-fx-font-family: "Avenir";
+ 	-fx-background-color: #a0787e;
+ 	-fx-text-fill: #ffffff;
+ 	-fx-border-radius: 8.0;
+}
+ 
+ /*
+  * _____MANAGER VIEW________
+  */
+  
+#EmployeeDetailsSplitPane {
+	-fx-background-color: #f0eee9;
+}
+#OrderManagementPane {
+	-fx-background-color: #c6dcd6;
+}
+ 
+/*
+ * _____RESTAURANT TABLE VIEW_____
+ */
+ 
+ #mainImage {
+    -fx-background-image: url("img/chezremy.png");
+    -fx-opacity: 0.9;
+}
+
+#KitchenMessagePane {
+	-fx-background-color: #c6dcd6;
+}
+
+#btnNewsKitch {
+	-fx-background-color: #a0787e;
+}
+
+#T1 {
+	-fx-background-radius: 60px;
+	-fx-font-family: "Avenir";
+	-fx-font-weight: bold;
+	-fx-text-fill: #fffff9;
+ 	-fx-border-radius: 8.0;
+ 	-fx-background-color: 
+        #bfc6d5,
+        rgba(0,0,0,0.05),
+        linear-gradient(#a39d9d, #615e5f),
+        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e3eaa5 80%, #f0eee9 100%),
+        linear-gradient(#f6ebbe, #e3eaa5);
+    -fx-background-insets: 0,9 9 8 9,9,10,11;
+    -fx-background-radius: 50;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
+}
+
+#T2 {
+	-fx-background-radius: 60px;
+	-fx-background-color: #f6cac9;
+	-fx-font-family: "Avenir";
+	-fx-font-weight: bold;
+	-fx-text-fill: #fffff9;
+	-fx-border-radius: 8.0;
+ 	-fx-background-color: 
+     #bfc6d5,
+        rgba(0,0,0,0.05),
+        linear-gradient(#a39d9d, #615e5f),
+        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e3eaa5 80%, #f0eee9 100%),
+        linear-gradient(#f6ebbe, #e3eaa5);
+    -fx-background-insets: 0,9 9 8 9,9,10,11;
+    -fx-background-radius: 50;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
+}
+
+#T3 {
+	-fx-background-radius: 15px;
+	-fx-background-color: #f6cac9;
+	-fx-font-family: "Avenir";
+	-fx-font-weight: bold;
+	-fx-text-fill: #fffff9;
+	-fx-border-radius: 8.0;
+ 	-fx-background-color: 
+         #bfc6d5,
+        rgba(0,0,0,0.05),
+        linear-gradient(#a39d9d, #615e5f),
+        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e3eaa5 80%, #f0eee9 100%),
+        linear-gradient(#f6ebbe, #e3eaa5);
+    -fx-background-insets: 0,9 9 8 9,9,10,11;
+    -fx-background-radius: 50;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
+}
+
+#T4 {
+	-fx-background-radius: 15px;
+	-fx-background-color: #bd9bc0;
+	-fx-font-family: "Avenir";
+	-fx-font-weight: bold;
+	-fx-text-fill: #fffff9;
+	-fx-border-radius: 8.0;
+ 	-fx-background-color: 
+        #bfc6d5,
+        rgba(0,0,0,0.05),
+        linear-gradient(#a39d9d, #615e5f),
+        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e3eaa5 80%, #f0eee9 100%),
+        linear-gradient(#f6ebbe, #e3eaa5);
+    -fx-background-insets: 0,9 9 8 9,9,10,11;
+    -fx-background-radius: 50;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
+}
+
+/*
+ * _____ORDER REGISTRATION VIEW - STYLING_____
+ * Reference: http://blog.capterra.com/wp-content/uploads/2016/03/Order_management-11-720x486.png
+ */
+
+#OverviewPane {
+	-fx-background-color: #c6dcd6;
+}
+
+#btnGoBack {
+	-fx-font-size: 15px;
+ 	-fx-font-family: "Avenir";
+ 	-fx-background-color: #bfc6d5;
+ 	-fx-text-fill: #ffffff;
+ 	-fx-border-radius: 8.0;
+}

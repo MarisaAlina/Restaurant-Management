@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="428.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.ucl.cs.gc01.me.application.view.LoginController">
+   <children>
+      <Button fx:id="btnLogin" layoutX="121.0" layoutY="303.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      <TextField fx:id="txtUserName" layoutX="69.0" layoutY="190.0" promptText="UserName" />
+      <PasswordField fx:id="txtPassword" layoutX="69.0" layoutY="238.0" promptText="Password" />
+      <Label fx:id="lblStatus" layoutX="30.0" layoutY="374.0" prefHeight="19.0" prefWidth="141.0" text="Status" textAlignment="RIGHT" textFill="#a12d13">
+         <font>
+            <Font name="Code-Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="130.0" text="Welcome to Chez Remy">
+         <font>
+            <Font name="Avenir Light" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="68.0" fitWidth="123.0" layoutX="116.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="img/chez.png" /> 
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
