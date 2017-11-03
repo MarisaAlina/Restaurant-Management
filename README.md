@@ -1,4 +1,5 @@
 ## Chez Remy
+![image](Restaurant-Management/chezremy.png)
 
 Restaurant Management System (Java FX, JVM, JavaBeans API).
 
