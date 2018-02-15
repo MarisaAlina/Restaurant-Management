@@ -73,9 +73,10 @@ public class LoginController {
 				this.app.currentUser = user; 	//"pointing" to position in userList & assigns values to variable
 				if (user.getIsManager() == true) {
 					this.app.showManagerView();
-				}else{
+				} else {
 					this.app.showRestaurantView();
-				}return;
+				}
+			return;
 			}
 		}
 		lblStatus.setText("Login Failed. Try again");
